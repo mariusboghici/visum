@@ -1,0 +1,77 @@
+/* Reset default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the BODY */
+body {
+  height: 100vh; 
+  display: flex;
+  flex-direction: column;
+  background: rgb(54, 54, 54);
+  background: radial-gradient(
+    circle,
+    rgba(54, 54, 54, 1) 0%,
+    rgba(41, 41, 41, 1) 61%,
+    rgba(0, 0, 0, 1) 100%
+  );
+}
+
+/* Center the title */
+h1 {
+  font-size:30vw;
+  color: rgba(255, 255, 255, 0.185);
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Style the content */
+.content {
+  text-align: center;
+  justify-content: center;
+  flex-grow: 0.5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: x-large;
+  list-style-type: none;
+}
+
+.content li {
+  display: inline-block;
+}
+
+a {
+  /* position: absolute; */
+  color: #ffffff; /* Set your desired text color */
+  text-decoration: none; /* Remove the underline */
+}
+
+/* Style the footer */
+.footer {
+  margin: auto;
+  /* width: fit-content; */
+  text-align: center;
+  list-style-type: none;
+  background-color: #00000000;
+  /* padding: 10px; */
+}
+
+.footer li {
+  display: inline-block;
+}
+
+/* Set fading effect to socialmedia icons */
+.mail, .insta, .x, .reddit, .tumblr, .pinterest, .facebook {
+  width: auto;
+  overflow: auto;
+  opacity: 0.15;
+  transition: color 0.4s, opacity 0.4s;
+}
+
+.mail:hover, .insta:hover, .x:hover, .reddit:hover, .tumblr:hover, .pinterest:hover, .facebook:hover {
+  opacity: 1;
+}
