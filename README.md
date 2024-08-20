@@ -5,4 +5,4 @@ Thanks!
 Aceasta este o nuvelă ce conține 20 de povestiri inspirate din visele autorului. Adică eu.
 
 Cu stimă,
-  Marius răzvan Boghici
+  Marius Răzvan Boghici
