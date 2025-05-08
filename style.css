@@ -65,13 +65,13 @@ a {
 }
 
 /* Set fading effect to socialmedia icons */
-.mail, .insta, .x, .reddit, .tumblr, .pinterest, .facebook {
+.mail, .insta, .x, .reddit, .tumblr, .pinterest, .facebook, .phone {
   width: auto;
   overflow: auto;
   opacity: 0.15;
   transition: color 0.4s, opacity 0.4s;
 }
 
-.mail:hover, .insta:hover, .x:hover, .reddit:hover, .tumblr:hover, .pinterest:hover, .facebook:hover {
+.mail:hover, .insta:hover, .x:hover, .reddit:hover, .tumblr:hover, .pinterest:hover, .facebook:hover, .phone:hover {
   opacity: 1;
 }
