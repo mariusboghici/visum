@@ -4,12 +4,6 @@
    ========================================================================== 
 */
 
-/* --- FIX GLOBAL IMPOSIBIL DE IGNORAT PENTRU IMAGINI --- */
-img {
-    max-width: 100% !important;
-    height: auto !important;
-}
-
 /* --- CSS Variables --- */
 :root {
     --bg-primary: #121417;
@@ -54,6 +48,7 @@ main {
     padding: 40px 0;
 }
 
+/* --- Header & Navigation --- */
 header {
     padding: 24px 0;
     border-bottom: 1px solid var(--border-color);
@@ -78,7 +73,7 @@ header {
     color: var(--accent-blue);
 }
 
-/* --- VISUM Hero Section --- */
+/* --- VISUM Hero Section (Stânga - Copertă, Dreapta - Text) --- */
 .hero-card {
     background: var(--bg-secondary);
     border: 1px solid var(--border-color);
@@ -86,31 +81,35 @@ header {
     padding: 32px;
     margin-bottom: 48px;
     display: flex;
+    flex-direction: row; /* Forțează așezarea una lângă alta */
+    align-items: center;
     gap: 32px;
-    align-items: flex-start;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
-/* Limitare strictă pentru coperta cartii */
+/* Coperta (Stânga) - Dimensiune fixă, compactă */
 .hero-cover,
 .hero-card > img {
-    flex-shrink: 0;
-    width: 220px !important;
-    max-width: 220px !important;
-    height: auto !important;
+    width: 180px;
+    max-width: 180px;
+    height: auto;
+    flex-shrink: 0; /* Previne strângerea imaginii */
     border-radius: 8px;
-    overflow: hidden;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-}
-
-.hero-cover img {
-    width: 100% !important;
-    height: auto !important;
     display: block;
 }
 
+.hero-cover img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+/* Caseta de text (Dreapta) */
 .hero-content {
     flex: 1;
+    min-width: 0; /* Permite textului să se încadreze frumos */
 }
 
 .badge {
@@ -140,6 +139,7 @@ header {
     margin-bottom: 24px;
 }
 
+/* --- Action Buttons --- */
 .hero-buttons {
     display: flex;
     gap: 16px;
@@ -196,7 +196,7 @@ header {
     color: var(--text-primary);
 }
 
-/* --- Grid & Dimming Effect --- */
+/* --- Hub Grid & Efectul de Estompare --- */
 .hub-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -213,9 +213,9 @@ header {
     display: flex;
     flex-direction: column;
     
-    /* Estompat în starea normală */
+    /* Stare normală: Estompat */
     opacity: 0.55;
-    filter: grayscale(25%);
+    filter: grayscale(20%);
     transition: opacity var(--transition-speed) ease, 
                 filter var(--transition-speed) ease, 
                 transform var(--transition-speed) ease, 
@@ -238,9 +238,9 @@ header {
 }
 
 .card-image img {
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover !important;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     display: block;
     transition: transform var(--transition-speed) ease;
 }
@@ -277,22 +277,19 @@ footer {
     color: var(--text-secondary);
 }
 
-@media (max-width: 850px) {
+/* --- Adaptare pe Ecran Mic (Mobil) --- */
+@media (max-width: 768px) {
     .hero-card {
         flex-direction: column;
-        align-items: flex-start;
-        padding: 24px;
+        align-items: center;
+        text-align: center;
     }
 
-    .hero-cover,
-    .hero-card > img {
-        width: 100% !important;
-        max-width: 260px !important;
-        margin: 0 auto;
+    .hero-buttons {
+        justify-content: center;
     }
 
     .hub-grid {
         grid-template-columns: 1fr;
-        gap: 20px;
     }
 }
