@@ -111,15 +111,15 @@ body {
 }
 
 .btn-primary {
-    background-color: #ffffff;
-    color: #0f0f11;
+    background-color: #3b82f6; /* Albastru vibrant, dar plăcut */
+    color: #ffffff;
+    border: 1px solid #3b82f6;
 }
 
 .btn-primary:hover {
-    background-color: #dcdcdc;
-    transform: translateY(-2px);
+    background-color: #2563eb; /* Albastru puțin mai închis la hover */
+    border-color: #2563eb;
 }
-
 .btn-secondary {
     background-color: transparent;
     color: #ffffff;
