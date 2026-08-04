@@ -1,3 +1,9 @@
+/* 
+   ==========================================================================
+   mariusboghici.com - Main Stylesheet (style.css)
+   ========================================================================== 
+*/
+
 /* --- CSS Variables & Design Tokens --- */
 :root {
     --bg-primary: #121417;
@@ -78,21 +84,25 @@ header {
     margin-bottom: 48px;
     display: flex;
     gap: 32px;
-    align-items: center;
+    align-items: flex-start;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
-.hero-cover {
+/* Limitare dimensiune imagine copertă (previne scalarea uriașă) */
+.hero-cover,
+.hero-card img:first-child {
     flex-shrink: 0;
-    width: 220px;
+    width: 220px !important;
+    max-width: 220px !important;
+    height: auto !important;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
 
 .hero-cover img {
-    width: 100%;
-    height: auto;
+    width: 100% !important;
+    height: auto !important;
     display: block;
 }
 
@@ -203,7 +213,7 @@ header {
     display: flex;
     flex-direction: column;
     
-    /* STAREA NORMALĂ: Estompat (dimmed) */
+    /* STAREA NORMALĂ: Estompat */
     opacity: 0.55;
     filter: grayscale(25%);
     transition: opacity var(--transition-speed) ease, 
@@ -212,7 +222,7 @@ header {
                 border-color var(--transition-speed) ease;
 }
 
-/* STAREA LA MOUSE HOVER: Complet vizibil & Iluminat */
+/* STAREA LA MOUSE HOVER: Complet vizibil */
 .hub-grid .card:hover {
     opacity: 1;
     filter: grayscale(0%);
@@ -277,9 +287,10 @@ footer {
         padding: 24px;
     }
 
-    .hero-cover {
-        width: 100%;
-        max-width: 260px;
+    .hero-cover,
+    .hero-card img:first-child {
+        width: 100% !important;
+        max-width: 260px !important;
         margin: 0 auto;
     }
 
