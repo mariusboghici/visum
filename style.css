@@ -198,3 +198,25 @@ body {
     color: #555566;
     font-size: 0.85rem;
 }
+
+/* --- FIX IMAGINE HERO & ESTOMPARE CARDURI --- */
+
+/* 1. Limitare strictă copertă VISUM */
+.visum-cover img {
+    max-width: 220px !important;
+    height: auto !important;
+}
+
+/* 2. Efectul de dimming (estompare) pe cele 3 căsuțe de jos */
+.card {
+    opacity: 0.55;
+    filter: grayscale(20%);
+    transition: opacity 0.3s ease, filter 0.3s ease, transform 0.2s ease, border-color 0.2s ease;
+}
+
+.card:hover {
+    opacity: 1;
+    filter: grayscale(0%);
+    transform: translateY(-4px);
+    border-color: #3b82f6;
+}
