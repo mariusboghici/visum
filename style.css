@@ -4,7 +4,13 @@
    ========================================================================== 
 */
 
-/* --- CSS Variables & Design Tokens --- */
+/* --- FIX GLOBAL IMPOSIBIL DE IGNORAT PENTRU IMAGINI --- */
+img {
+    max-width: 100% !important;
+    height: auto !important;
+}
+
+/* --- CSS Variables --- */
 :root {
     --bg-primary: #121417;
     --bg-secondary: #1a1d21;
@@ -19,7 +25,6 @@
     --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
-/* --- Global Reset & Box Sizing --- */
 *, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
@@ -37,7 +42,6 @@ body {
     flex-direction: column;
 }
 
-/* --- Container & Layout --- */
 .container {
     width: 100%;
     max-width: 1100px;
@@ -50,7 +54,6 @@ main {
     padding: 40px 0;
 }
 
-/* --- Header & Navigation --- */
 header {
     padding: 24px 0;
     border-bottom: 1px solid var(--border-color);
@@ -88,9 +91,9 @@ header {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
-/* Limitare dimensiune imagine copertă (previne scalarea uriașă) */
+/* Limitare strictă pentru coperta cartii */
 .hero-cover,
-.hero-card img:first-child {
+.hero-card > img {
     flex-shrink: 0;
     width: 220px !important;
     max-width: 220px !important;
@@ -137,7 +140,6 @@ header {
     margin-bottom: 24px;
 }
 
-/* --- Action Buttons --- */
 .hero-buttons {
     display: flex;
     gap: 16px;
@@ -187,7 +189,6 @@ header {
     transform: translateY(-2px);
 }
 
-/* --- Section Title --- */
 .section-title {
     font-size: 1.25rem;
     font-weight: 600;
@@ -195,14 +196,13 @@ header {
     color: var(--text-primary);
 }
 
-/* --- Category Hub Grid --- */
+/* --- Grid & Dimming Effect --- */
 .hub-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 24px;
 }
 
-/* --- Category Card & Dimming Effect --- */
 .hub-grid .card {
     background-color: var(--bg-card);
     border: 1px solid var(--border-color);
@@ -213,7 +213,7 @@ header {
     display: flex;
     flex-direction: column;
     
-    /* STAREA NORMALĂ: Estompat */
+    /* Estompat în starea normală */
     opacity: 0.55;
     filter: grayscale(25%);
     transition: opacity var(--transition-speed) ease, 
@@ -222,7 +222,6 @@ header {
                 border-color var(--transition-speed) ease;
 }
 
-/* STAREA LA MOUSE HOVER: Complet vizibil */
 .hub-grid .card:hover {
     opacity: 1;
     filter: grayscale(0%);
@@ -239,9 +238,9 @@ header {
 }
 
 .card-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
     display: block;
     transition: transform var(--transition-speed) ease;
 }
@@ -270,7 +269,6 @@ header {
     line-height: 1.5;
 }
 
-/* --- Footer --- */
 footer {
     border-top: 1px solid var(--border-color);
     padding: 24px 0;
@@ -279,7 +277,6 @@ footer {
     color: var(--text-secondary);
 }
 
-/* --- Responsive Layout (Mobile / Tablet) --- */
 @media (max-width: 850px) {
     .hero-card {
         flex-direction: column;
@@ -288,7 +285,7 @@ footer {
     }
 
     .hero-cover,
-    .hero-card img:first-child {
+    .hero-card > img {
         width: 100% !important;
         max-width: 260px !important;
         margin: 0 auto;
