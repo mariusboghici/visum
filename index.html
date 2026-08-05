@@ -3,13 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marius Boghici | Scriitor & Creator</title>
+
+    <!-- SEO de bază -->
+    <title>Marius Boghici | Scriitor & Creator — VISUM, Muzică, Compoziții, Design</title>
+    <meta name="description" content="Marius Răzvan Boghici — scriitor și creator. Descoperă VISUM, o colecție de 20 de povestiri onirice, alături de proiecte de muzică, compoziții digitale și design vizual.">
+    <meta name="author" content="Marius Răzvan Boghici">
+    <meta name="robots" content="index, follow">
+    <!-- ATENȚIE: înlocuiește URL-ul de mai jos cu domeniul real al site-ului -->
+    <link rel="canonical" href="https://www.mariusboghici.ro/">
+
+    <!-- Open Graph (Facebook, LinkedIn, WhatsApp etc.) -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Marius Boghici">
+    <meta property="og:title" content="Marius Boghici | Scriitor & Creator">
+    <meta property="og:description" content="Descoperă VISUM, o colecție de 20 de povestiri onirice, alături de proiecte de muzică, compoziții digitale și design vizual.">
+    <meta property="og:image" content="cover.jpg">
+    <meta property="og:url" content="https://www.mariusboghici.ro/">
+    <meta property="og:locale" content="ro_RO">
+
+    <!-- Twitter / X Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Marius Boghici | Scriitor & Creator">
+    <meta name="twitter:description" content="Descoperă VISUM, o colecție de 20 de povestiri onirice, alături de proiecte de muzică, compoziții digitale și design vizual.">
+    <meta name="twitter:image" content="cover.jpg">
+
     <link rel="stylesheet" href="style.css?v=2">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+    <!-- Reguli CSS suplimentare, doar pentru elemente noi de accesibilitate (nu ating stilurile existente) -->
+    <style>
+        .visually-hidden {
+            position: absolute !important;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+        .skip-link {
+            position: absolute;
+            left: -9999px;
+            top: 0;
+            background: #000;
+            color: #fff;
+            padding: 8px 16px;
+            z-index: 1000;
+            text-decoration: none;
+        }
+        .skip-link:focus {
+            left: 8px;
+            top: 8px;
+        }
+    </style>
+
+    <!-- Date structurate (JSON-LD) pentru motoare de căutare -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Marius Răzvan Boghici",
+        "url": "https://www.mariusboghici.ro/",
+        "jobTitle": "Scriitor & Creator",
+        "image": "https://www.mariusboghici.ro/cover.jpg"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Book",
+        "name": "VISUM",
+        "author": {
+            "@type": "Person",
+            "name": "Marius Răzvan Boghici"
+        },
+        "image": "https://www.mariusboghici.ro/cover.jpg",
+        "description": "O colecție captivantă de 20 de povestiri nocturne, aranjate în ordine alfabetică, născute direct din jurnalul de vise al autorului.",
+        "inLanguage": "ro"
+    }
+    </script>
 </head>
 <body>
+
+    <!-- Link de salt pentru utilizatorii de tastatură și cititoare de ecran -->
+    <a href="#main-content" class="skip-link">Sari la conținutul principal</a>
 
     <!-- Header / Branding -->
     <header class="site-header">
@@ -17,12 +98,13 @@
         <p class="tagline">Expresie Creativă</p>
     </header>
 
-    <main class="container">
+    <main class="container" id="main-content">
         
         <!-- Hero Section: VISUM -->
-        <section class="hero-visum">
+        <section class="hero-visum" aria-labelledby="visum-heading">
+            <h2 id="visum-heading" class="visually-hidden">VISUM — Cartea</h2>
             <div class="visum-cover">
-                <img src="cover.jpg" alt="Coperta Cărții VISUM" loading="eager">
+                <img src="cover.jpg" alt="Coperta cărții VISUM de Marius Răzvan Boghici" loading="eager">
             </div>
             <div class="visum-content">
                 <span class="badge">Lansare Recentă</span>
@@ -35,18 +117,19 @@ De la suspansul psihologic din "Alarma" și până la realismul cinic și plin d
                 
                 <div class="cta-buttons">
                     <!-- Buton Primar: Cumpărare (UBL) -->
-                    <a href="https://books2read.com/u/mdpxzW?store=ignore" target="_blank" rel="noopener" class="btn btn-primary">
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 8px; vertical-align: middle;">
+                    <a href="https://books2read.com/u/mdpxzW?store=ignore" target="_blank" rel="noopener noreferrer" class="btn btn-primary" aria-label="Cumpără VISUM pe rețelele partenere (se deschide într-o filă nouă)">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 8px; vertical-align: middle;" aria-hidden="true" focusable="false">
         <circle cx="9" cy="21" r="1"></circle>
         <circle cx="20" cy="21" r="1"></circle>
         <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
     </svg>
     <span>Cumpără / Rețele Partenere</span>
+    <span class="visually-hidden">(se deschide într-o filă nouă)</span>
 </a>
                     
                     <!-- Buton Secundar: Citire Gratuită pe Site -->
                     <a href="/visum/" class="btn btn-secondary">
-                        📖 Citește Gratuit pe Site
+                        <span aria-hidden="true">📖</span> Citește Gratuit pe Site
                     </a>
                 </div>
             </div>
@@ -55,11 +138,12 @@ De la suspansul psihologic din "Alarma" și până la realismul cinic și plin d
         <hr class="divider">
 
         <!-- Grid Proiecte / Categorii Viitoare -->
-        <section class="hub-grid">
-            
+        <section class="hub-grid" aria-labelledby="hub-heading">
+            <h2 id="hub-heading" class="visually-hidden">Proiecte și categorii</h2>
+
             <a href="/muzica/" class="card">
                 <div class="card-image">
-                    <img src="01.jpg" alt="Muzică">
+                    <img src="01.jpg" alt="Ilustrație reprezentativă pentru secțiunea Muzică">
                 </div>
                 <div class="card-content">
                     <h3>Muzică</h3>
@@ -70,7 +154,7 @@ De la suspansul psihologic din "Alarma" și până la realismul cinic și plin d
 
             <a href="/compozitii/" class="card">
                 <div class="card-image">
-                    <img src="02.jpg" alt="Compoziții">
+                    <img src="02.jpg" alt="Ilustrație reprezentativă pentru secțiunea Compoziții">
                 </div>
                 <div class="card-content">
                     <h3>Compoziții</h3>
@@ -81,7 +165,7 @@ De la suspansul psihologic din "Alarma" și până la realismul cinic și plin d
 
             <a href="/design/" class="card">
                 <div class="card-image">
-                    <img src="03.jpg" alt="Design">
+                    <img src="03.jpg" alt="Ilustrație reprezentativă pentru secțiunea Design">
                 </div>
                 <div class="card-content">
                     <h3>Design</h3>
