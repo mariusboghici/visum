@@ -1,8 +1,7 @@
-This is a book inspired by authors dreams.
-For now, only romanian version is available.
+This website is about me.
 Thanks!
 
-Aceasta este o nuvelă ce conține 20 de povestiri inspirate din visele autorului. Adică eu.
+Acest site este despre mine.
 
 Cu stimă,
   Marius Răzvan Boghici
