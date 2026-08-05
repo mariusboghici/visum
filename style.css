@@ -199,6 +199,15 @@ body {
     font-size: 0.85rem;
 }
 
+.footer-phone-link {
+    color: inherit;
+    text-decoration: none;
+}
+.footer-phone-link:hover,
+.footer-phone-link:focus {
+    text-decoration: underline;
+}
+
 /* --- FIX IMAGINE HERO & ESTOMPARE CARDURI --- */
 
 /* 1. Limitare strictă copertă VISUM */
@@ -220,3 +229,4 @@ body {
     transform: translateY(-4px);
     border-color: #3b82f6;
 }
+
