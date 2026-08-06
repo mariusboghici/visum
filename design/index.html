@@ -90,13 +90,13 @@
             margin-bottom: 35px;
         }
 
-        /* BANNER PANORAMIC REFAKUT - ELEGANT SI INTEGRAT */
+        /* BANNER PANORAMIC (onesti3.png) */
         .featured-banner {
             background: linear-gradient(180deg, #ffffff 0%, #f1f3f9 100%);
-            border: 1px solid rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.2);
             border-radius: 16px;
             overflow: hidden;
-            margin-bottom: 40px;
+            margin-bottom: 35px;
             cursor: pointer;
             padding: 18px 25px;
             display: flex;
@@ -118,7 +118,7 @@
             max-height: 160px;
             display: block;
             object-fit: contain;
-            filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.15));
+            filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.12));
         }
 
         /* GRID GALERIE */
@@ -128,29 +128,28 @@
             gap: 24px;
         }
 
-        /* CARDURI NOU STILIZATE - CONTRAST OPTIM */
+        /* CARDURI SIMBOLURI - Același stil curat și luminos ca bannerele */
         .gallery-item {
-            background: rgba(255, 255, 255, 0.04);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            backdrop-filter: blur(10px);
+            background: linear-gradient(180deg, #ffffff 0%, #f1f3f9 100%);
+            border: 1px solid rgba(255, 255, 255, 0.2);
             border-radius: 16px;
             overflow: hidden;
             cursor: pointer;
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            padding: 24px;
+            padding: 22px;
             display: flex;
             align-items: center;
             justify-content: center;
             outline: none;
             height: 210px;
             position: relative;
+            box-shadow: 0 8px 20px -6px rgba(0, 0, 0, 0.4);
         }
 
         .gallery-item:hover {
             transform: translateY(-6px);
-            background: rgba(255, 255, 255, 0.08);
             border-color: #3b82f6;
-            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.5), 0 0 15px rgba(59, 130, 246, 0.25);
+            box-shadow: 0 14px 30px -5px rgba(59, 130, 246, 0.3);
         }
 
         .gallery-item img {
@@ -160,7 +159,7 @@
             height: auto;
             object-fit: contain;
             display: block;
-            filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.4));
+            filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
             transition: transform 0.3s ease;
         }
 
@@ -210,7 +209,7 @@
             max-height: 85vh;
             display: block;
             object-fit: contain;
-            background: #121318;
+            background: #ffffff;
             padding: 30px;
         }
 
@@ -263,7 +262,7 @@
             <img src="onesti3.png" alt="Onești Vector Skyline Panoramic" loading="eager">
         </div>
 
-        <!-- Galerie Simboluri -->
+        <!-- Galerie Simboluri Vectoriale -->
         <section class="gallery-grid" aria-label="Galerie simboluri vectoriale">
             
             <button class="gallery-item" onclick="openLightbox('one2.png')">
