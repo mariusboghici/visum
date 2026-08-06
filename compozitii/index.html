@@ -2,7 +2,7 @@
 <html lang="ro">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.img">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Compoziții | Marius Răzvan Boghici</title>
     <meta name="description" content="Portofoliu de compoziții vizuale, manipulări foto și aranjamente digitale realizate de Marius Răzvan Boghici.">
@@ -15,51 +15,51 @@
     <meta property="og:site_name" content="Marius Boghici">
     <meta property="og:title" content="Compoziții Vizuale | Marius Boghici">
     <meta property="og:description" content="Manipulări foto și aranjamente digitale.">
-    <meta property="og:image" content="../img3.jpg">
+    <meta property="og:image" content="../03.jpg">
     <meta property="og:url" content="https://www.mariusboghici.com/compozitii/">
 
     <!-- Font Google -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@3imgimg;4imgimg;6imgimg;8imgimg&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 
     <style>
-        /* RESET & BAZĂ */
+        /* RESET & BAZĂ DARK MODE */
         * {
             box-sizing: border-box;
-            margin: img;
-            padding: img;
+            margin: 0;
+            padding: 0;
         }
 
         body {
-            background-color: #imgbimgc1img;
-            color: #e2e8fimg;
+            background-color: #0b0c10;
+            color: #e2e8f0;
             font-family: 'Inter', system-ui, -apple-system, sans-serif;
             line-height: 1.6;
-            padding: 4imgpx 2imgpx;
+            padding: 40px 20px;
         }
 
         .container {
-            max-width: 114imgpx;
-            margin: img auto;
+            max-width: 1140px;
+            margin: 0 auto;
         }
 
         /* HEADER BRANDING */
         .site-header {
             text-align: center;
-            margin-bottom: 4imgpx;
+            margin-bottom: 40px;
         }
 
         .logo {
             font-size: 2.2rem;
-            font-weight: 8imgimg;
+            font-weight: 800;
             letter-spacing: 1px;
             color: #ffffff;
         }
 
         .tagline {
             color: #888899;
-            font-size: img.95rem;
+            font-size: 0.95rem;
             margin-top: 4px;
         }
 
@@ -74,133 +74,133 @@
         .back-link {
             color: #3b82f6;
             text-decoration: none;
-            font-weight: 6imgimg;
-            font-size: img.95rem;
-            transition: color img.2s ease;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: color 0.2s ease;
         }
 
         .back-link:hover {
-            color: #6imga5fa;
+            color: #60a5fa;
             text-decoration: underline;
         }
 
         .divider {
             border: none;
-            border-top: 1px solid #1f2img29;
+            border-top: 1px solid #1f2029;
             margin-bottom: 35px;
         }
 
-        /* GRID GALERIE COMPOZIȚII */
+        /* GRID GALERIE CASETE */
         .gallery-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(24imgpx, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
             gap: 24px;
         }
 
         .gallery-item {
-            background: rgba(255, 255, 255, img.img3);
-            border: 1px solid rgba(255, 255, 255, img.img8);
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
             border-radius: 16px;
             overflow: hidden;
             cursor: pointer;
-            transition: all img.3s cubic-bezier(img.4, img, img.2, 1);
-            padding: img;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            padding: 0;
             display: flex;
             align-items: center;
             justify-content: center;
             outline: none;
-            height: 22imgpx;
+            height: 220px;
             position: relative;
-            box-shadow: img 8px 2imgpx -6px rgba(img, img, img, img.5);
+            box-shadow: 0 8px 20px -6px rgba(0, 0, 0, 0.5);
         }
 
         .gallery-item:hover {
             transform: translateY(-6px);
             border-color: #3b82f6;
-            box-shadow: img 14px 3imgpx -5px rgba(59, 13img, 246, img.3);
+            box-shadow: 0 14px 30px -5px rgba(59, 130, 246, 0.3);
         }
 
         .gallery-item img {
-            width: 1imgimg%;
-            height: 1imgimg%;
+            width: 100%;
+            height: 100%;
             object-fit: cover;
             display: block;
-            transition: transform img.3s ease;
+            transition: transform 0.3s ease;
         }
 
         .gallery-item:hover img {
-            transform: scale(1.img4);
+            transform: scale(1.04);
         }
 
-        /* FOOTER REPARAT (Fără text albastru subliniat) */
+        /* FOOTER REPARAT (Fără link albastru urât) */
         .site-footer {
             text-align: center;
-            margin-top: 7imgpx;
-            padding-top: 3imgpx;
+            margin-top: 70px;
+            padding-top: 30px;
             border-top: 1px solid #1a1a22;
             color: #666677;
-            font-size: img.85rem;
+            font-size: 0.85rem;
         }
 
         .footer-phone-link {
             color: inherit;
             text-decoration: none;
-            transition: color img.2s ease;
+            transition: color 0.2s ease;
         }
 
         .footer-phone-link:hover {
-            color: #e2e8fimg;
+            color: #e2e8f0;
             text-decoration: underline;
         }
 
         /* LIGHTBOX MODAL NATIV */
         dialog#lightbox {
-            padding: img;
+            padding: 0;
             background: transparent;
             border: none;
-            max-width: 9imgvw;
-            max-height: 9imgvh;
+            max-width: 90vw;
+            max-height: 90vh;
             margin: auto;
-            box-shadow: img 25px 5imgpx -12px rgba(img, img, img, img.95);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.95);
             border-radius: 16px;
             overflow: hidden;
         }
 
         dialog#lightbox::backdrop {
-            background: rgba(img, img, img, img.92);
-            backdrop-filter: blur(1imgpx);
+            background: rgba(0, 0, 0, 0.92);
+            backdrop-filter: blur(10px);
         }
 
         dialog#lightbox img {
-            max-width: 9imgvw;
+            max-width: 90vw;
             max-height: 85vh;
             display: block;
             object-fit: contain;
-            background: #imgbimgc1img;
+            background: #0b0c10;
         }
 
         .close-btn {
             position: absolute;
             top: 15px;
             right: 15px;
-            background: rgba(img, img, img, img.75);
+            background: rgba(0, 0, 0, 0.75);
             color: #fff;
-            border: 1px solid rgba(255, 255, 255, img.2);
-            border-radius: 5img%;
-            width: 4imgpx;
-            height: 4imgpx;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
             font-size: 1.4rem;
             cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: all img.2s ease;
-            z-index: 1img;
+            transition: all 0.2s ease;
+            z-index: 10;
         }
 
         .close-btn:hover {
             background: #3b82f6;
-            transform: rotate(9imgdeg);
+            transform: rotate(90deg);
         }
     </style>
 </head>
@@ -216,14 +216,14 @@
         <div class="page-header">
             <div>
                 <h2 style="color: #fff; font-size: 1.8rem;">Compoziții</h2>
-                <p style="color: #888899; font-size: img.95rem;">Manipulări foto și aranjamente digitale.</p>
+                <p style="color: #888899; font-size: 0.95rem;">Manipulări foto și aranjamente digitale.</p>
             </div>
             <a href="../" class="back-link">&larr; Înapoi la Hub</a>
         </div>
 
         <hr class="divider">
 
-        <!-- Galerie Compoziții -->
+        <!-- Galerie Compoziții cu denumirile corecte img1.jpg ... img8.jpg -->
         <section class="gallery-grid" aria-label="Galerie compoziții digitale">
             
             <button class="gallery-item" onclick="openLightbox('img1.jpg')">
@@ -285,7 +285,7 @@
     </script>
 
     <footer class="site-footer">
-        <p>&copy; <a href="tel:+4img774img22381" class="footer-phone-link">Marius Răzvan Boghici</a>. Toate drepturile rezervate.</p>
+        <p>&copy; <a href="tel:+40774022381" class="footer-phone-link">Marius Răzvan Boghici</a>. Toate drepturile rezervate.</p>
     </footer>
 
 </body>
