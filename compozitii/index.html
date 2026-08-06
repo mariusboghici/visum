@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- SEO de bază -->
     <title>Compoziții | Marius Răzvan Boghici</title>
-    <meta name="description" content="Galerie de manipulări foto, aranjamente și compoziții digitale create de Marius Răzvan Boghici.">
+    <meta name="description" content="Portofoliu de compoziții vizuale, manipulări foto și aranjamente digitale realizate de Marius Răzvan Boghici.">
     <meta name="author" content="Marius Răzvan Boghici">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://www.mariusboghici.com/compozitii/">
@@ -15,23 +14,61 @@
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Marius Boghici">
     <meta property="og:title" content="Compoziții Vizuale | Marius Boghici">
-    <meta property="og:description" content="Manipulări foto și creații digitale.">
-    <meta property="og:image" content="../02.jpg">
+    <meta property="og:description" content="Manipulări foto și aranjamente digitale.">
+    <meta property="og:image" content="../03.jpg">
     <meta property="og:url" content="https://www.mariusboghici.com/compozitii/">
 
-    <!-- Stiluri existente + font -->
-    <link rel="stylesheet" href="../style.css?v=2">
+    <!-- Font Google -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 
     <style>
-        /* Adaptare layout pentru Galerie */
+        /* RESET & BAZĂ */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #0b0c10;
+            color: #e2e8f0;
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1140px;
+            margin: 0 auto;
+        }
+
+        /* HEADER BRANDING */
+        .site-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .logo {
+            font-size: 2.2rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+            color: #ffffff;
+        }
+
+        .tagline {
+            color: #888899;
+            font-size: 0.95rem;
+            margin-top: 4px;
+        }
+
+        /* ANTET PAGINĂ */
         .page-header {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
         }
 
         .back-link {
@@ -43,42 +80,80 @@
         }
 
         .back-link:hover {
-            color: #2563eb;
+            color: #60a5fa;
             text-decoration: underline;
         }
 
+        .divider {
+            border: none;
+            border-top: 1px solid #1f2029;
+            margin-bottom: 35px;
+        }
+
+        /* GRID GALERIE COMPOZIȚII */
         .gallery-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 24px;
         }
 
         .gallery-item {
-            background-color: #18181c;
-            border: 1px solid #2a2a32;
-            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
             overflow: hidden;
             cursor: pointer;
-            transition: transform 0.2s ease, border-color 0.2s ease, opacity 0.2s ease;
-            opacity: 0.75;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             outline: none;
+            height: 220px;
+            position: relative;
+            box-shadow: 0 8px 20px -6px rgba(0, 0, 0, 0.5);
         }
 
         .gallery-item:hover {
-            opacity: 1;
-            transform: translateY(-4px);
+            transform: translateY(-6px);
             border-color: #3b82f6;
+            box-shadow: 0 14px 30px -5px rgba(59, 130, 246, 0.3);
         }
 
         .gallery-item img {
             width: 100%;
-            height: 200px;
+            height: 100%;
             object-fit: cover;
             display: block;
+            transition: transform 0.3s ease;
         }
 
-        /* Modal Lightbox Nativ */
+        .gallery-item:hover img {
+            transform: scale(1.04);
+        }
+
+        /* FOOTER REPARAT (Fără text albastru subliniat) */
+        .site-footer {
+            text-align: center;
+            margin-top: 70px;
+            padding-top: 30px;
+            border-top: 1px solid #1a1a22;
+            color: #666677;
+            font-size: 0.85rem;
+        }
+
+        .footer-phone-link {
+            color: inherit;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .footer-phone-link:hover {
+            color: #e2e8f0;
+            text-decoration: underline;
+        }
+
+        /* LIGHTBOX MODAL NATIV */
         dialog#lightbox {
             padding: 0;
             background: transparent;
@@ -86,14 +161,14 @@
             max-width: 90vw;
             max-height: 90vh;
             margin: auto;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.75);
-            border-radius: 8px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.95);
+            border-radius: 16px;
             overflow: hidden;
         }
 
         dialog#lightbox::backdrop {
-            background: rgba(0, 0, 0, 0.85);
-            backdrop-filter: blur(4px);
+            background: rgba(0, 0, 0, 0.92);
+            backdrop-filter: blur(10px);
         }
 
         dialog#lightbox img {
@@ -101,34 +176,36 @@
             max-height: 85vh;
             display: block;
             object-fit: contain;
+            background: #0b0c10;
         }
 
         .close-btn {
             position: absolute;
-            top: 10px;
-            right: 10px;
-            background: rgba(0, 0, 0, 0.6);
+            top: 15px;
+            right: 15px;
+            background: rgba(0, 0, 0, 0.75);
             color: #fff;
             border: 1px solid rgba(255, 255, 255, 0.2);
             border-radius: 50%;
-            width: 36px;
-            height: 36px;
-            font-size: 1.2rem;
+            width: 40px;
+            height: 40px;
+            font-size: 1.4rem;
             cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: background 0.2s ease;
+            transition: all 0.2s ease;
+            z-index: 10;
         }
 
         .close-btn:hover {
             background: #3b82f6;
+            transform: rotate(90deg);
         }
     </style>
 </head>
 <body>
 
-    <!-- Header / Branding -->
     <header class="site-header">
         <h1 class="logo">Marius Răzvan BOGHICI</h1>
         <p class="tagline">Expresie Creativă</p>
@@ -136,7 +213,6 @@
 
     <main class="container" id="main-content">
         
-        <!-- Antet Pagină Compoziții -->
         <div class="page-header">
             <div>
                 <h2 style="color: #fff; font-size: 1.8rem;">Compoziții</h2>
@@ -145,62 +221,53 @@
             <a href="../" class="back-link">&larr; Înapoi la Hub</a>
         </div>
 
-        <hr class="divider" style="margin: 20px 0 30px;">
+        <hr class="divider">
 
-        <!-- Galerie 8 Imagini -->
-        <section class="gallery-grid" aria-label="Galerie de compoziții">
+        <!-- Galerie Compoziții -->
+        <section class="gallery-grid" aria-label="Galerie compoziții digitale">
             
-            <!-- Imaginea 1 -->
-            <button class="gallery-item" onclick="openLightbox('img1.jpg')">
-                <img src="img1.jpg" alt="Compoziție digitală 1" loading="lazy">
+            <button class="gallery-item" onclick="openLightbox('01.jpg')">
+                <img src="01.jpg" alt="Compoziție Vizuală 1" loading="lazy">
             </button>
 
-            <!-- Imaginea 2 -->
-            <button class="gallery-item" onclick="openLightbox('img2.jpg')">
-                <img src="img2.jpg" alt="Compoziție digitală 2" loading="lazy">
+            <button class="gallery-item" onclick="openLightbox('02.jpg')">
+                <img src="02.jpg" alt="Compoziție Vizuală 2" loading="lazy">
             </button>
 
-            <!-- Imaginea 3 -->
-            <button class="gallery-item" onclick="openLightbox('img3.jpg')">
-                <img src="img3.jpg" alt="Compoziție digitală 3" loading="lazy">
+            <button class="gallery-item" onclick="openLightbox('03.jpg')">
+                <img src="03.jpg" alt="Compoziție Vizuală 3" loading="lazy">
             </button>
 
-            <!-- Imaginea 4 -->
-            <button class="gallery-item" onclick="openLightbox('img4.jpg')">
-                <img src="img4.jpg" alt="Compoziție digitală 4" loading="lazy">
+            <button class="gallery-item" onclick="openLightbox('04.jpg')">
+                <img src="04.jpg" alt="Compoziție Vizuală 4" loading="lazy">
             </button>
 
-            <!-- Imaginea 5 -->
-            <button class="gallery-item" onclick="openLightbox('img5.jpg')">
-                <img src="img5.jpg" alt="Compoziție digitală 5" loading="lazy">
+            <button class="gallery-item" onclick="openLightbox('05.jpg')">
+                <img src="05.jpg" alt="Compoziție Vizuală 5" loading="lazy">
             </button>
 
-            <!-- Imaginea 6 -->
-            <button class="gallery-item" onclick="openLightbox('img6.jpg')">
-                <img src="img6.jpg" alt="Compoziție digitală 6" loading="lazy">
+            <button class="gallery-item" onclick="openLightbox('06.jpg')">
+                <img src="06.jpg" alt="Compoziție Vizuală 6" loading="lazy">
             </button>
 
-            <!-- Imaginea 7 -->
-            <button class="gallery-item" onclick="openLightbox('img7.jpg')">
-                <img src="img7.jpg" alt="Compoziție digitală 7" loading="lazy">
+            <button class="gallery-item" onclick="openLightbox('07.jpg')">
+                <img src="07.jpg" alt="Compoziție Vizuală 7" loading="lazy">
             </button>
 
-            <!-- Imaginea 8 -->
-            <button class="gallery-item" onclick="openLightbox('img8.jpg')">
-                <img src="img8.jpg" alt="Compoziție digitală 8" loading="lazy">
+            <button class="gallery-item" onclick="openLightbox('08.jpg')">
+                <img src="08.jpg" alt="Compoziție Vizuală 8" loading="lazy">
             </button>
 
         </section>
 
     </main>
 
-    <!-- Modal Lightbox (Nativ HTML5) -->
+    <!-- Modal Lightbox -->
     <dialog id="lightbox" onclick="closeLightbox(event)">
         <button class="close-btn" aria-label="Închide imaginea">&times;</button>
         <img id="lightbox-img" src="" alt="Imagine mărită">
     </dialog>
 
-    <!-- Script simplu de 5 rânduri pentru deschidere/închidere imagine -->
     <script>
         const lightbox = document.getElementById('lightbox');
         const lightboxImg = document.getElementById('lightbox-img');
@@ -211,15 +278,13 @@
         }
 
         function closeLightbox(event) {
-            // Închide modalul la click pe fundal sau pe butonul X
             if (event.target === lightbox || event.target.classList.contains('close-btn')) {
                 lightbox.close();
             }
         }
     </script>
 
-    <!-- Footer -->
-      <footer class="site-footer">
+    <footer class="site-footer">
         <p>&copy; <a href="tel:+40774022381" class="footer-phone-link">Marius Răzvan Boghici</a>. Toate drepturile rezervate.</p>
     </footer>
 
