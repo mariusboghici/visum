@@ -3,14 +3,233 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Design | Marius Răzvan Boghici</title>
 
-    <!-- Forțăm reîncărcarea stilului -->
-    <link rel="stylesheet" href="style.css?v=99">
-    
+    <title>Design | Marius Răzvan Boghici</title>
+    <meta name="description" content="Portofoliu de design: identitate vizuală, concepte grafice și proiecte digitale realizate de Marius Răzvan Boghici.">
+    <meta name="author" content="Marius Răzvan Boghici">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.mariusboghici.com/design/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Marius Boghici">
+    <meta property="og:title" content="Design & Concepte Grafice | Marius Boghici">
+    <meta property="og:description" content="Identitate vizuală, concepte și proiecte grafice.">
+    <meta property="og:image" content="../03.jpg">
+    <meta property="og:url" content="https://www.mariusboghici.com/design/">
+
+    <!-- Font Google -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+    <style>
+        /* RESET & BAZĂ */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #0b0b0e;
+            color: #e2e8f0;
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            padding: 30px 15px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        /* HEADER BRANDING */
+        .site-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .logo {
+            font-size: 2.2rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+            color: #ffffff;
+        }
+
+        .tagline {
+            color: #888899;
+            font-size: 0.95rem;
+            margin-top: 4px;
+        }
+
+        /* ANTET PAGINĂ */
+        .page-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 25px;
+        }
+
+        .back-link {
+            color: #3b82f6;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: color 0.2s ease;
+        }
+
+        .back-link:hover {
+            color: #60a5fa;
+            text-decoration: underline;
+        }
+
+        .divider {
+            border: none;
+            border-top: 1px solid #22222a;
+            margin-bottom: 30px;
+        }
+
+        /* BANNER PANORAMIC (one3.png) */
+        .featured-banner {
+            background-color: #ffffff;
+            border: 1px solid #333340;
+            border-radius: 14px;
+            overflow: hidden;
+            margin-bottom: 35px;
+            cursor: pointer;
+            padding: 15px;
+            min-height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.25s ease;
+        }
+
+        .featured-banner:hover {
+            border-color: #3b82f6;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.25);
+        }
+
+        .featured-banner img {
+            width: 100%;
+            height: auto;
+            max-height: 150px;
+            display: block;
+            object-fit: contain;
+        }
+
+        /* GRID GALERIE */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 22px;
+        }
+
+        /* CARDURI VECTORI - FUNDAL NEUTRU ILUMINAT PENTRU CONTRAST PERFECT */
+        .gallery-item {
+            background: #1d1e24;
+            border: 1px solid #2e303d;
+            border-radius: 12px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            padding: 22px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            outline: none;
+            height: 200px;
+            position: relative;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            border-color: #3b82f6;
+            background: #252730;
+            box-shadow: 0 12px 24px -5px rgba(0, 0, 0, 0.6), 0 0 12px rgba(59, 130, 246, 0.2);
+        }
+
+        .gallery-item img {
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            display: block;
+            filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
+        }
+
+        /* FOOTER */
+        .site-footer {
+            text-align: center;
+            margin-top: 60px;
+            padding-top: 25px;
+            border-top: 1px solid #1a1a22;
+            color: #666677;
+            font-size: 0.85rem;
+        }
+
+        .footer-phone-link {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .footer-phone-link:hover {
+            text-decoration: underline;
+        }
+
+        /* LIGHTBOX MODAL NATIV */
+        dialog#lightbox {
+            padding: 0;
+            background: transparent;
+            border: none;
+            max-width: 90vw;
+            max-height: 90vh;
+            margin: auto;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.9);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        dialog#lightbox::backdrop {
+            background: rgba(0, 0, 0, 0.92);
+            backdrop-filter: blur(8px);
+        }
+
+        dialog#lightbox img {
+            max-width: 90vw;
+            max-height: 85vh;
+            display: block;
+            object-fit: contain;
+            background: #111116;
+            padding: 20px;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: rgba(0, 0, 0, 0.75);
+            color: #fff;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            width: 38px;
+            height: 38px;
+            font-size: 1.3rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.2s ease;
+            z-index: 10;
+        }
+
+        .close-btn:hover {
+            background: #3b82f6;
+        }
+    </style>
 </head>
 <body>
 
@@ -19,7 +238,7 @@
         <p class="tagline">Expresie Creativă</p>
     </header>
 
-    <main class="container">
+    <main class="container" id="main-content">
         
         <div class="page-header">
             <div>
@@ -29,64 +248,67 @@
             <a href="../" class="back-link">&larr; Înapoi la Hub</a>
         </div>
 
-        <hr class="divider" style="margin: 20px 0 30px;">
+        <hr class="divider">
 
-        <!-- Panorama Sus -->
+        <!-- Banner Panoramic Sus (one3.png) -->
         <div class="featured-banner" onclick="openLightbox('one3.png')">
             <img src="one3.png" alt="Onești Vector Skyline Panoramic" loading="eager">
         </div>
 
-        <!-- Galerie -->
-        <section class="gallery-grid">
+        <!-- Galerie Simboluri (Toate fișierele .png) -->
+        <section class="gallery-grid" aria-label="Galerie simboluri vectoriale">
+            
             <button class="gallery-item" onclick="openLightbox('one2.png')">
-                <img src="one2.png" alt="Poster Grafic Onești">
+                <img src="one2.png" alt="Poster Grafic Onești" loading="lazy">
             </button>
 
             <button class="gallery-item" onclick="openLightbox('hotel.png')">
-                <img src="hotel.png" alt="Hotel Trotuș">
+                <img src="hotel.png" alt="Hotel Trotuș" loading="lazy">
             </button>
 
             <button class="gallery-item" onclick="openLightbox('catedrala.png')">
-                <img src="catedrala.png" alt="Catedrala">
+                <img src="catedrala.png" alt="Catedrala" loading="lazy">
             </button>
 
             <button class="gallery-item" onclick="openLightbox('borzesti.png')">
-                <img src="borzesti.png" alt="Biserica Borzești">
+                <img src="borzesti.png" alt="Biserica Borzești" loading="lazy">
             </button>
 
             <button class="gallery-item" onclick="openLightbox('casa-de-cultura.png')">
-                <img src="casa-de-cultura.png" alt="Casa de Cultură">
+                <img src="casa-de-cultura.png" alt="Casa de Cultură" loading="lazy">
             </button>
 
             <button class="gallery-item" onclick="openLightbox('stefan.png')">
-                <img src="stefan.png" alt="Monument Ștefan cel Mare">
+                <img src="stefan.png" alt="Monument Ștefan cel Mare" loading="lazy">
             </button>
 
             <button class="gallery-item" onclick="openLightbox('eminescu.png')">
-                <img src="eminescu.png" alt="Bustul Mihai Eminescu">
+                <img src="eminescu.png" alt="Bustul Mihai Eminescu" loading="lazy">
             </button>
 
             <button class="gallery-item" onclick="openLightbox('nadia.png')">
-                <img src="nadia.png" alt="Monumentul Nadia Comăneci">
+                <img src="nadia.png" alt="Monumentul Nadia Comăneci" loading="lazy">
             </button>
 
             <button class="gallery-item" onclick="openLightbox('sala-de-sport.png')">
-                <img src="sala-de-sport.png" alt="Sala de Sport">
+                <img src="sala-de-sport.png" alt="Sala de Sport" loading="lazy">
             </button>
 
             <button class="gallery-item" onclick="openLightbox('biblioteca.png')">
-                <img src="biblioteca.png" alt="Biblioteca Municipală">
+                <img src="biblioteca.png" alt="Biblioteca Municipală" loading="lazy">
             </button>
 
             <button class="gallery-item" onclick="openLightbox('primaria.png')">
-                <img src="primaria.png" alt="Primăria">
+                <img src="primaria.png" alt="Primăria" loading="lazy">
             </button>
+
         </section>
 
     </main>
 
+    <!-- Modal Lightbox -->
     <dialog id="lightbox" onclick="closeLightbox(event)">
-        <button class="close-btn">&times;</button>
+        <button class="close-btn" aria-label="Închide imaginea">&times;</button>
         <img id="lightbox-img" src="" alt="Imagine mărită">
     </dialog>
 
