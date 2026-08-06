@@ -32,15 +32,15 @@
         }
 
         body {
-            background-color: #0d0d11;
+            background-color: #0b0c10;
             color: #e2e8f0;
             font-family: 'Inter', system-ui, -apple-system, sans-serif;
             line-height: 1.6;
-            padding: 30px 15px;
+            padding: 40px 20px;
         }
 
         .container {
-            max-width: 1100px;
+            max-width: 1140px;
             margin: 0 auto;
         }
 
@@ -86,69 +86,71 @@
 
         .divider {
             border: none;
-            border-top: 1px solid #22222a;
-            margin-bottom: 30px;
+            border-top: 1px solid #1f2029;
+            margin-bottom: 35px;
         }
 
-        /* BANNER PANORAMIC (onesti3.png) */
+        /* BANNER PANORAMIC REFAKUT - ELEGANT SI INTEGRAT */
         .featured-banner {
-            background-color: #ffffff;
-            border: 1px solid #333340;
-            border-radius: 14px;
+            background: linear-gradient(180deg, #ffffff 0%, #f1f3f9 100%);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 16px;
             overflow: hidden;
-            margin-bottom: 35px;
+            margin-bottom: 40px;
             cursor: pointer;
-            padding: 15px;
-            min-height: 100px;
+            padding: 18px 25px;
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: all 0.25s ease;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
         }
 
         .featured-banner:hover {
+            transform: translateY(-4px);
             border-color: #3b82f6;
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.25);
+            box-shadow: 0 15px 35px -5px rgba(59, 130, 246, 0.3);
         }
 
         .featured-banner img {
             width: 100%;
             height: auto;
-            max-height: 150px;
+            max-height: 160px;
             display: block;
             object-fit: contain;
+            filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.15));
         }
 
         /* GRID GALERIE */
         .gallery-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 22px;
+            grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+            gap: 24px;
         }
 
-        /* CARDURI VECTORI - FUNDAL GRI NATIV PENTRU CONTRAST EXCELENT */
+        /* CARDURI NOU STILIZATE - CONTRAST OPTIM */
         .gallery-item {
-            background: #22242b;
-            border: 1px solid #333642;
-            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
             overflow: hidden;
             cursor: pointer;
-            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-            padding: 22px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            padding: 24px;
             display: flex;
             align-items: center;
             justify-content: center;
             outline: none;
-            height: 200px;
+            height: 210px;
             position: relative;
         }
 
         .gallery-item:hover {
-            transform: translateY(-5px);
+            transform: translateY(-6px);
+            background: rgba(255, 255, 255, 0.08);
             border-color: #3b82f6;
-            background: #2a2d37;
-            box-shadow: 0 12px 24px -5px rgba(0, 0, 0, 0.6), 0 0 12px rgba(59, 130, 246, 0.2);
+            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.5), 0 0 15px rgba(59, 130, 246, 0.25);
         }
 
         .gallery-item img {
@@ -158,14 +160,19 @@
             height: auto;
             object-fit: contain;
             display: block;
-            filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
+            filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.4));
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
         }
 
         /* FOOTER */
         .site-footer {
             text-align: center;
-            margin-top: 60px;
-            padding-top: 25px;
+            margin-top: 70px;
+            padding-top: 30px;
             border-top: 1px solid #1a1a22;
             color: #666677;
             font-size: 0.85rem;
@@ -188,14 +195,14 @@
             max-width: 90vw;
             max-height: 90vh;
             margin: auto;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.9);
-            border-radius: 12px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.95);
+            border-radius: 16px;
             overflow: hidden;
         }
 
         dialog#lightbox::backdrop {
             background: rgba(0, 0, 0, 0.92);
-            backdrop-filter: blur(8px);
+            backdrop-filter: blur(10px);
         }
 
         dialog#lightbox img {
@@ -203,8 +210,8 @@
             max-height: 85vh;
             display: block;
             object-fit: contain;
-            background: #111116;
-            padding: 20px;
+            background: #121318;
+            padding: 30px;
         }
 
         .close-btn {
@@ -215,19 +222,20 @@
             color: #fff;
             border: 1px solid rgba(255, 255, 255, 0.2);
             border-radius: 50%;
-            width: 38px;
-            height: 38px;
-            font-size: 1.3rem;
+            width: 40px;
+            height: 40px;
+            font-size: 1.4rem;
             cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: background 0.2s ease;
+            transition: all 0.2s ease;
             z-index: 10;
         }
 
         .close-btn:hover {
             background: #3b82f6;
+            transform: rotate(90deg);
         }
     </style>
 </head>
@@ -250,12 +258,12 @@
 
         <hr class="divider">
 
-        <!-- Banner Panoramic Sus (Corectat onesti3.png) -->
+        <!-- Banner Panoramic Sus -->
         <div class="featured-banner" onclick="openLightbox('onesti3.png')">
             <img src="onesti3.png" alt="Onești Vector Skyline Panoramic" loading="eager">
         </div>
 
-        <!-- Galerie Simboluri (Toate fișierele .png) -->
+        <!-- Galerie Simboluri -->
         <section class="gallery-grid" aria-label="Galerie simboluri vectoriale">
             
             <button class="gallery-item" onclick="openLightbox('one2.png')">
